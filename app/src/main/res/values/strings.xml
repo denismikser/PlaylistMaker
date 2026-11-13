@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Playlist Maker</string>
+
+    <!-- Заголовки и кнопки -->
+    <string name="settings_title">Настройки</string>
+    <string name="dark_theme">Тёмная тема</string>
+    <string name="share_app">Поделиться приложением</string>
+    <string name="write_to_support">Написать разработчикам</string>
+    <string name="user_agreement">Пользовательское соглашение</string>
+
+    <!-- Данные для Intent -->
+    <string name="share_text">Присоединяйтесь к Playlist Maker! Скачать: https://play.google.com/store/apps/details?id=com.example.playlistmaker</string>
+
+    <string name="support_email">daratrifonova@kpfu.ru</string> <!-- Укажите ваш email -->
+    <string name="support_email_subject">Сообщение разработчикам и разработчицам приложения Playlist Maker</string>
+    <string name="support_email_body">Спасибо разработчикам и разработчицам за крутое приложение!</string>
+
+    <string name="offer_url">https://yandex.ru/legal/practicum_offer/</string>
 </resources>
