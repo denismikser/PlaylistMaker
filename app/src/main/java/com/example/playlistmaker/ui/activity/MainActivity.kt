@@ -1,4 +1,4 @@
-package com.example.playlistmaker.ui
+package com.example.playlistmaker.ui.activity
 
 import android.R
 import android.os.Bundle
@@ -18,6 +18,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.compose.rememberNavController
+import com.example.playlistmaker.ui.PlaylistHost
 
 // Этот класс запускает всё приложение
 class MainActivity : ComponentActivity() {
