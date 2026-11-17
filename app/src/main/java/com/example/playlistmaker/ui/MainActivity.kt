@@ -1,5 +1,6 @@
-package com.example.playlistmaker
+package com.example.playlistmaker.ui
 
+import android.R
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -69,25 +70,25 @@ fun MainScreen(
         Column(modifier = Modifier.padding(top = 16.dp)) {
             MenuRow(
                 title = "Поиск",
-                iconRes = android.R.drawable.ic_menu_search,
+                iconRes = R.drawable.ic_menu_search,
                 textColor = textColor,
                 onClick = { onSearchClick() } // <-- Исправлено
             )
             MenuRow(
                 title = "Плейлисты",
-                iconRes = android.R.drawable.ic_menu_gallery,
+                iconRes = R.drawable.ic_menu_gallery,
                 textColor = textColor,
                 onClick = { /* Заглушка */ }
             )
             MenuRow(
                 title = "Избранное",
-                iconRes = android.R.drawable.star_on,
+                iconRes = R.drawable.star_on,
                 textColor = textColor,
                 onClick = { /* Заглушка */ }
             )
             MenuRow(
                 title = "Настройки",
-                iconRes = android.R.drawable.ic_menu_manage,
+                iconRes = R.drawable.ic_menu_manage,
                 textColor = textColor,
                 onClick = { onSettingsClick() } // <-- Исправлено
             )

@@ -1,10 +1,11 @@
-package com.example.playlistmaker
+package com.example.playlistmaker.ui
 
 import androidx.compose.runtime.Composable
-import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.NavHostController
+import com.example.playlistmaker.ui.search.SearchScreen
+import com.example.playlistmaker.ui.setting.SettingsScreen
 
 @Composable
 fun PlaylistHost(navController: NavHostController) {

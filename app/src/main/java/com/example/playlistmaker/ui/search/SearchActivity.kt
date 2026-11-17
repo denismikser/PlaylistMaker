@@ -1,9 +1,7 @@
-package com.example.playlistmaker
+package com.example.playlistmaker.ui.search
 
-import android.os.Bundle
 import androidx.compose.ui.platform.LocalContext
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
