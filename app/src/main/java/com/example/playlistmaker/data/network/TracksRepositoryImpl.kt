@@ -5,14 +5,14 @@ import com.example.playlistmaker.data.dto.TrackSearchRequest
 import com.example.playlistmaker.data.dto.TrackSearchResponse
 import com.example.playlistmaker.domain.api.TracksRepository
 import com.example.playlistmaker.domain.model.Track
+import kotlinx.coroutines.delay
 
 class TracksRepositoryImpl(private val networkClient: NetworkClient) : TracksRepository {
 
     override fun searchTracks(expression: String): List<Track> {
         val response = networkClient.doRequest(TrackSearchRequest(expression))
 
-        if (response.resultCode == 200) { // успешный запрос
-            // Кастуем ответ к конкретному типу, так как мы знаем, что вернулся список треков
+        if (response.resultCode == 200) {
             return (response as TrackSearchResponse).results.map {
                 val seconds = it.trackTimeMillis / 1000
                 val minutes = seconds / 60
@@ -24,5 +24,10 @@ class TracksRepositoryImpl(private val networkClient: NetworkClient) : TracksRep
         } else {
             return emptyList()
         }
+    }
+
+    override suspend fun loadSomeData(): List<Track> {
+        delay(5000L)
+        return emptyList()
     }
 }

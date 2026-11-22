@@ -9,4 +9,8 @@ class TrackSearchInteractorImpl(private val repository: TracksRepository) : Trac
     override fun searchTracks(expression: String): List<Track> {
         return repository.searchTracks(expression)
     }
+
+    override suspend fun loadSomeData(): List<Track> {
+        return repository.loadSomeData()
+    }
 }
