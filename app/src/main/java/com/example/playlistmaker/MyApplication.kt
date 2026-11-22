@@ -1,19 +1,22 @@
 package com.example.playlistmaker
 
 import android.app.Application
-import com.example.playlistmaker.data.network.RetrofitNetworkClient
-import com.example.playlistmaker.data.network.TracksRepositoryImpl
-import com.example.playlistmaker.domain.api.TrackSearchInteractor
-import com.example.playlistmaker.domain.api.TracksRepository
-import com.example.playlistmaker.domain.impl.TrackSearchInteractorImpl
+import com.example.playlistmaker.data.di.repositoryModule
+import com.example.playlistmaker.ui.view_model.SearchViewModel
+import org.koin.core.context.GlobalContext.startKoin
+import org.koin.core.module.dsl.viewModel
+import org.koin.dsl.module
 
 class MyApplication : Application() {
-
-    fun getTracksRepository(): TracksRepository {
-        return TracksRepositoryImpl(RetrofitNetworkClient())
-    }
-
-    fun provideTrackSearchInteractor(): TrackSearchInteractor {
-        return TrackSearchInteractorImpl(getTracksRepository())
+    override fun onCreate() {
+        super.onCreate()
+        startKoin {
+            val viewModelModule = module {
+                viewModel {
+                    SearchViewModel(get())
+                }
+            }
+            modules(repositoryModule, viewModelModule)
+        }
     }
 }

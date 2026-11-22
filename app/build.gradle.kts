@@ -57,4 +57,6 @@ dependencies {
     implementation("androidx.navigation:navigation-compose:2.8.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.0")
     implementation("com.google.code.gson:gson:2.10.1")
+    implementation("io.insert-koin:koin-android:3.5.6")
+    implementation("io.insert-koin:koin-androidx-compose:3.5.6")
 }
