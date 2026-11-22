@@ -6,7 +6,7 @@ plugins {
 android {
     namespace = "com.example.playlistmaker"
     compileSdk {
-        version = release(36) {
+        version = release(37){
             minorApiLevel = 1
         }
     }
@@ -55,4 +55,8 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.tooling)
     implementation("androidx.compose.material:material-icons-extended")
     implementation("androidx.navigation:navigation-compose:2.8.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.0")
+    implementation("com.google.code.gson:gson:2.10.1")
+    implementation("io.insert-koin:koin-android:3.5.6")
+    implementation("io.insert-koin:koin-androidx-compose:3.5.6")
 }
