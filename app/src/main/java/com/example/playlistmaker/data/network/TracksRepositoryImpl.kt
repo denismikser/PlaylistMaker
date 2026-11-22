@@ -11,14 +11,11 @@ class TracksRepositoryImpl(private val networkClient: NetworkClient) : TracksRep
 
     override fun searchTracks(expression: String): List<Track> {
         val response = networkClient.doRequest(TrackSearchRequest(expression))
-
         if (response.resultCode == 200) {
             return (response as TrackSearchResponse).results.map {
                 val seconds = it.trackTimeMillis / 1000
                 val minutes = seconds / 60
                 val trackTime = "%02d".format(minutes) + ":" + "%02d".format(seconds - minutes * 60)
-
-                // Создаем доменную модель
                 Track(it.id, it.trackName, it.artistName, trackTime)
             }
         } else {
@@ -29,5 +26,15 @@ class TracksRepositoryImpl(private val networkClient: NetworkClient) : TracksRep
     override suspend fun loadSomeData(): List<Track> {
         delay(5000L)
         return emptyList()
+    }
+
+    override suspend fun loadTrackDetail(trackId: Long): Track {
+        delay(3000L)
+        return Track(
+            id = trackId,
+            trackName = "Test Track",
+            artistName = "Test Artist",
+            trackTime = "3:45"
+        )
     }
 }
