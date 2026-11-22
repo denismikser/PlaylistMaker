@@ -10,10 +10,16 @@
 
     <!-- Данные для Intent -->
     <string name="share_text">Присоединяйтесь к Playlist Maker! Скачать: https://play.google.com/store/apps/details?id=com.example.playlistmaker</string>
-
-    <string name="support_email">daratrifonova@kpfu.ru</string> <!-- Укажите ваш email -->
+    <string name="support_email">daratrifonova@kpfu.ru</string>
     <string name="support_email_subject">Сообщение разработчикам и разработчицам приложения Playlist Maker</string>
     <string name="support_email_body">Спасибо разработчикам и разработчицам за крутое приложение!</string>
-
     <string name="offer_url">https://yandex.ru/legal/practicum_offer/</string>
+
+    <!-- Строки для экрана поиска -->
+    <string name="search_tracks_placeholder">Поиск</string>
+    <string name="search_icon">Поиск</string>
+    <string name="clear_search">Очистить</string>
+    <string name="no_tracks_found">Ничего не найдено</string>
+    <string name="check_connection">Проверьте подключение к интернету</string>
+    <string name="arrow_forward">Вперед</string>
 </resources>
